@@ -55,4 +55,9 @@ Reflection
 This was primarily a setup week. The most challenging aspect was configuring SSH port forwarding on VirtualBox on Apple Silicon, as ARM64 VMs behave slightly differently from x86 systems. I had previously used Linux in COIT12201 (Electronic Crime and Digital Forensics) for forensic analysis, so basic command-line navigation was familiar. However, setting up SSH key-based authentication with GitHub was a new process that required careful attention to the GitHub documentation.
 
 
+Novel Insight: ARM64 Architecture and Cryptographic Performance
 
+During setup I noted that my Ubuntu installation runs on ARM64 (aarch64) rather than the standard x86-64 architecture used in most tutorial demonstrations. This is relevant to cryptography because ARM processors include hardware-accelerated cryptographic instructions specifically ARMv8 Cryptography Extensions which provide native AES, SHA-1, and SHA-256 acceleration at the hardware level.
+This means my AES encryption benchmarks in later weeks may differ from x86 results, since operations that require software emulation on some systems are handled in dedicated silicon on ARM. This is worth noting when comparing performance results with classmates running x86 VMs, and connects directly to the unit's focus on practical cryptographic performance analysis.
+
+Referance - https://developer.arm.com/documentation
